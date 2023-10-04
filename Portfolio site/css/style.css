@@ -203,13 +203,35 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
-
-
-
-
 /* -- FOOTER -- */
 .wrapper2 {
     background: #FEFEFE;
     text-align: center;
     padding: 2em;
+}
+
+/* -- モバイル版 -- */
+@media (max-width: 600px) {
+    img {
+        width: 100%;
+        height: 600px;
+        background-image: url(..//images/top.images2.png);
+        background-size: cover;
+    }
+    .page-title {
+        font-size: 2.5rem;
+    }
+    /* -- HEADER -- */
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 0 20px;
+    }
+
+    /* -- HOME --*/
+    .home-content {
+        margin-top: 20%;
+    }
 }

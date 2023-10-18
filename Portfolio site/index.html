@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
+
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sakura design.-Portfolio-</title>
         <meta name="description" content="WebデザイナーSayaのポートフォリオサイト">
-
+    <!-- 表示領域をデバイス依存にする、viewportを設定する -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
     <!-- CSS -->
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link href="css/style.css" rel="stylesheet">    
     </head>
+    
     <body>
         <header class="page-header wrapper">
             <h1><a href="index.html"><img class="logo" src="images/logo2.png" alt="Portfolio siteホーム"></a></h1>
             <nav>
                 <ul class="main-nav">
-                    <li>Home</li>
+                    <li><a href="#index.html">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#works">Works</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -35,32 +37,36 @@
                     <p>デザイナーのsayaです。</p>
                     <p>丁寧なコミュニケーションで情報整理・問題点を把握し、思いやりと行動力を武器に、効果的なデザインをご提案します。</p>
                     <p>人との繋がりを大切に、「また頼みたい」と言われるリピーターが多いデザイナーを目指しています。</p><br>
-                    <p>skil : WixでのHP作成・管理</p>
-                    <p>&emsp;&emsp;&thinsp;WordPressでのHPやブログ作成・管理</p>
-                    <p>&emsp;&emsp;&thinsp;figma使用してのデザイン作成</p>
+                    <p>[skil]</p>
+                    <p><span>⚫︎WixでのHP作成・管理</span></p>
+                    <p><span>⚫︎WordPressでのHPや</span><span>ブログ作成・管理</span></p>
+                    <p><span>⚫︎figma使用してのデザイン作成</span></p>
+                    <p><span>⚫︎HTML/CSS</span></p>
             </div>
             <div class="photo"><img src="images/写真.png" alt="写真">
             </div>
         </div>
         
-
         <div id="works" class="works-container">
             <h3>Works</h3>
             <h4>制作したもの</h4>
             <div class="grid">
-                <div class="item"><img src="images/HP1.png" alt="HP1"><p>HP</p></div>
-                <div class="item"><img src="images/HP2.png" alt="HP2"><p>HP</p></div>
-                <div class="item"><img src="images/HP4.png" alt="HP4"><p>HP</p></div>
-                <div class="item"><img src="images/HP3.png" alt="HP3"><p>blog</p></div>
-                <div class="item"><img src="images/LPデザイン.png" alt="LPデザイン"><p>LPデザイン</p></div>
+                <div class="item"><a href="https://zaoyeyingmu.wixsite.com/my-site-15"><img src="images/HP1.png" alt="HP1"></a><p>HP</p></div>
+                <div class="item"><a href="https://zaoyeyingmu.wixsite.com/my-site-6"><img src="images/HP2.png" alt="HP2"></a><p>HP</p></div>
+                <div class="item"><a href="https://zaoyeyingmu.wixsite.com/my-site-16"><img src="images/HP3.png" alt="HP3"></a><p>HP</p></div>
+                
+                <div class="item"><a href="https://piapia11.com/"><img src="images/blog.png" alt="blog"></a><p>blog</p></div>
+                
+                <div class="item1"><img src="images/LPデザイン.png" alt="LPデザイン"><p>LPデザイン</p></div>
             </div>    
         </div>
 
         <div id="contact" class="contact-container">
             <h3>Contact</h3>
             <h4>お問い合わせ</h4>
-            <p>お仕事のご相談など、お気軽にお問い合わせください！</p>
-        
+            <p>
+                <span>お仕事のご相談など、</span><span>お気軽にお問い合わせください！</span>
+            </p>      
             <form action="#">
                 <div>
                     <label for="name">お名前</label>

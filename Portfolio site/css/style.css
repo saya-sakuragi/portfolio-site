@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* -- 共通部分　--*/
+/* -- 共通部分 --*/
 html {
     font-size: 100%;
 }
@@ -17,15 +17,16 @@ image {
     max-width: 100%;
 }
 
+
 /* -- HEADER --*/
 .logo {
     width: 210px;
     margin-top: 14px;
 }
 
-
 .main-nav {
     display: flex;
+    justify-content: space-between;
     font-size: 1.25rem;
     text-transform: none;
     margin-top: 50px;
@@ -52,12 +53,50 @@ image {
     padding: 0 4%;
 }
 
+/** -------- HEADER タブレット -------- **/
+@media screen and (max-width: 768px) {
+    .page-header {
+        /* 左右の余白を削除 */
+        padding: 0;
+    }
+    .logo {
+        /* sp時ロゴの大きさを横幅180pxに */
+        width: 180px;
+        /* 左余白24px */
+        margin-left: 24px;
+    }
+    .main-nav {
+        /* sp時、pc用のメニューは非表示にする */
+        display: none;
+    }
+}
+
+/** -------- HEADER スマホ -------- **/
+@media screen and (max-width: 479px) {
+    .page-header {
+        /* 左右の余白を削除 */
+        padding: 0;
+    }
+    .logo {
+        /* sp時ロゴの大きさを横幅180pxに */
+        width: 180px;
+        /* 左余白24px */
+        margin-left: 24px;
+    }
+    .main-nav {
+        /* sp時、pc用のメニューは非表示にする */
+        display: none;
+    }
+}
+
+
 /* -- HOME -- */
 .home-content {
     background-image: url(..//images/top.images2.png);
-    background-size: cover;
-    position: relative;
     height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 .page-title {
     text-align: center;
@@ -78,12 +117,55 @@ image {
     align-items: flex-start;
 }
 
+/** -------- HOME タブレット -------- **/
+@media screen and (max-width: 768px) {
+    .home-content {
+        /* sp用のヘッダー高さに合わせてheightを調整 */
+        height: calc(100vh - 60px);
+        /* sp用の背景画像に変更 */
+        background-image: url("../images/top.images5.png");
+    }
+    .home-content h2{
+        font-size: 50px;
+        top: 25%;
+        left: 50%;
+    }
+    .home-content p{
+        font-size: 30px;
+        top: 65%;
+        left: 67%;
+    }
+}
+
+/** -------- HOME スマホ -------- **/
+@media screen and (max-width: 479px) {
+    .home-content {
+        /* sp用のヘッダー高さに合わせてheightを調整 */
+        height: calc(100vh - 60px);
+        /* sp用の背景画像に変更 */
+        background-image: url("../images/top.images5.png");
+        background-size: auto;
+    }
+    .home-content h2{
+        /* フォントサイズを18pxにする */
+        font-size: 40px;
+        top: 15%;
+        left: 50%;
+    }
+    .home-content p{
+        /* フォントサイズを18pxにする */
+        font-size: 20px;
+        top: 45%;
+        left: 60%;
+    }
+}
+
 /* -- ABOUT -- */
 .about-container {
     background-color: #d2d2d2;
-
     display: flex;
 }
+
 .box1 {
     margin: 8em 0 8em 10em;
     border: solid 1px #FEFEFE;
@@ -108,7 +190,77 @@ image {
 .photo img {
     width: 40%;
     margin-top: 350px;
-    margin-left: 100px;
+    margin-left: 150px;
+}
+
+/** -------- ABOUT タブレット -------- **/
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        /* タイトルの上余白0px */
+        padding-top: 0;
+    }
+    .box1 {
+        margin: 70px 50px 40px;
+    }
+    .box1 h3{
+        /* sp時は中央寄せに変更する */
+        text-align: center;
+    }
+    .box1 h4{
+        /* sp時は中央寄せに変更する */
+        text-align: center;
+    }
+    .box1 p {
+        /* spanをインライン要素にすることで、改行しないようにする */
+        display: inline;
+    }
+    .photo img {
+        /* sp時下側余白20px */
+        width: 50%;
+        margin-top: 10px;
+        margin-left: 190px;
+        margin-bottom: 70px;
+    }
+}
+
+/** -------- ABOUT スマホ -------- **/
+
+@media screen and (max-width: 479px) {
+    .about-container {
+        flex-direction: column;
+        /* タイトルの上余白0px */
+        padding-top: 0;
+    }
+    .box1 {
+        margin: 70px 50px 40px;
+    }
+    .box1 h3{
+        /* sp時は中央寄せに変更する */
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    .box1 h4{
+        /* sp時は中央寄せに変更する */
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-bottom: 50px;
+    }
+    .box1 p {
+        /* spanをインライン要素にすることで、改行しないようにする */
+        display: inline;
+    }
+    .box1 p span {
+        display: inline-block;
+    }
+    .photo img {
+        /* sp時下側余白20px */
+        width: 40%;
+        margin-top: 10px;
+        margin-left: 130px;
+        margin-bottom: 70px;
+    }
 }
 
 
@@ -138,6 +290,9 @@ image {
 }
 .grid img {
     width: 90%;
+}
+.item1 {
+    width: 50%Ω;
 }
 
 /* -- CONTACT -- */
@@ -203,35 +358,73 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
+/** -------- CONTACT タブレット -------- **/
+@media screen and (max-width: 768px) {
+    .contact-container p{
+        /* フォントサイズを18pxにする */
+        font-size: 18px;
+    }
+    .contact-container p span {
+        display: inline-block;
+    }
+    label {
+        font-size: 14px;
+        margin-left: 20%;
+    }
+    input[type="text"],
+    input[type="email"], 
+    textarea {
+        padding: 5px;
+        margin-left: 20%;
+        width: 100%;
+    }
+    input[type="text"],
+    input[type="email"] {
+        max-width: 350px;
+    }
+    textarea {
+        height: 7rem;
+        max-width: 450px;
+    }
+    .button {
+        margin-left: 45%;
+    }
+}
+
+/** -------- CONTACT スマホ -------- **/
+@media screen and (max-width: 479px) {
+    .contact-container p{
+        font-size: 13px;
+    }
+    .contact-container p span {
+        display: inline-block;
+    }
+    label {
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: block;
+        margin-left: 20%;
+    }
+    input[type="text"],
+    input[type="email"], 
+    textarea {
+        padding: 5px;
+        margin-left: 20%;
+        width: 100%;
+        max-width: 240px;
+    }
+    textarea {
+        height: 7rem;
+    }
+    .button {
+        margin-left: 37%;
+    }
+}
+
+
 /* -- FOOTER -- */
 .wrapper2 {
     background: #FEFEFE;
     text-align: center;
     padding: 2em;
-}
-
-/* -- モバイル版 -- */
-@media (max-width: 600px) {
-    img {
-        width: 100%;
-        height: 600px;
-        background-image: url(..//images/top.images2.png);
-        background-size: cover;
-    }
-    .page-title {
-        font-size: 2.5rem;
-    }
-    /* -- HEADER -- */
-    .main-nav {
-        font-size: 1rem;
-        margin-top: 10px;
-    }
-    .main-nav li {
-        margin: 0 20px;
-    }
-
-    /* -- HOME --*/
-    .home-content {
-        margin-top: 20%;
-    }
 }
